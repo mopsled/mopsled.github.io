@@ -5,7 +5,6 @@ description: ""
 category:
 tags: [github]
 ---
-{% include JB/setup %}
 
 ### The problem
 I have some screenshots of an application that I want to put in my github repository's `README`. Fortunately, github provides a feature that can be used to solve this problem, called [github pages](http://pages.github.com/).
