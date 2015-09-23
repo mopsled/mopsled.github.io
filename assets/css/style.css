@@ -642,3 +642,47 @@ h2.month {
 	.post h1 { font-size:24px; }
 	.post h2 { font-size:20px; }
 }
+
+/* Custom CSS */
+pre {
+	margin-top: 6px;
+}
+pre strong {
+	color: #fdfdfd;
+	font-weight: bold;
+}
+
+code {
+	font-family:Menlo, Monaco, Courier;
+	background-color:#EEE;
+	font-size:14px;
+}
+
+li {
+	list-style-position: outside;
+}
+
+ol > li {
+	list-style-type: decimal;
+}
+
+img {
+	margin: 20px auto;
+}
+
+#wrapper {
+  max-width: 800px;
+}
+
+.profile #wrapper {
+	padding: 60px 40px 0px;
+}
+
+#post-list, #archive-list {
+    margin-top: 60px;
+}
+
+hr {
+	margin: 30px auto;
+	height: 1.1px; /* Noticed Chrome sometimes renders <hr> tags with a height < 1px and not displaying them. Setting to 1.1px fixes the problem */
+}
