@@ -4,6 +4,12 @@ permalink: about/
 profile: true
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+I'm a professional software developer with an interest in security and reverse engineering.
+
+---
+
+GitHub: [mopsled](https://github.com/mopsled)
+
+StackOverflow: [mopsled](https://stackoverflow.com/users/770938/mopsled)
 
 {% include footer.html %}
