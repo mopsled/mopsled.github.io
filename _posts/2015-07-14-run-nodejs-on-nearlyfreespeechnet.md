@@ -3,7 +3,7 @@ layout: post
 title: "Run node.js on NearlyFreeSpeech.Net"
 description: ""
 category:
-tags: [github]
+tags: [nodejs, nearlyfreespeech]
 ---
 
 NearlyFreeSpeech.net (NFSN) is a very inexpensive web host, DNS provider and domain registrar. NFSN [added support](https://blog.nearlyfreespeech.net/2014/09/24/more-power-more-control-more-insight-less-cost/) in 2014 for NodeJS, Django, and tons of other languages through persistent processes. This guide, [based on the Django tutorial provided by NFSN](https://blog.nearlyfreespeech.net/2014/11/17/how-to-django-on-nearlyfreespeech-net/), will demonstrate the setup I used for creating a node.js daemon.

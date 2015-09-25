@@ -646,6 +646,8 @@ h2.month {
 /* Custom CSS */
 pre {
 	margin-top: 6px;
+	overflow: auto;
+	white-space: pre;
 }
 pre strong {
 	color: #fdfdfd;
@@ -685,4 +687,9 @@ img {
 hr {
 	margin: 30px auto;
 	height: 1.1px; /* Noticed Chrome sometimes renders <hr> tags with a height < 1px and not displaying them. Setting to 1.1px fixes the problem */
+}
+
+.post h2 {
+	margin-top: 10px;
+	margin-bottom: 25px;
 }
