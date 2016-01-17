@@ -7,17 +7,18 @@ aboutPage: true
 markdown: rdiscount
 highlighter: pygments
 
+gems: [jekyll-paginate]
 paginate: 20
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
+domain_name: 'http://www.mopsled.com'
+google_analytics: 'UA-72537234-1'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
+url:            'http://www.mopsled.com'
 author:         'mopsled'
-authorTwitter:  'YourTwitterUsername'
+authorTwitter:  'mopsled'
 
 permalink:       /:year/:title/
 
