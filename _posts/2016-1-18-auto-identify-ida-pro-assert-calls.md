@@ -40,15 +40,15 @@ First, create a script file for IDAPython code. I'm calling mine `name-asserted-
 
 To run the script, go to `File` -> `Script File...` in IDA Pro
 
-![Open file menu](/assets/images/idapro-assert-script/script-file.png)
+<img src="/assets/images/idapro-assert-script/script-file.png" alt="Open file menu" style="width: 320px">l
 
 Select the `name-asserted-functions.py` file:
 
-![Choose file dialog](/assets/images/idapro-assert-script/open-script.png)
+<img src="/assets/images/idapro-assert-script/open-script.png" alt="Choose file dialog" style="width: 600px">   
 
 The script may pause for a bit then dump the names of discovered `sub_*` functions:
 
-![IDAPython evaluated output of unnamed functions](/assets/images/idapro-assert-script/output-sub.png)
+<img src="/assets/images/idapro-assert-script/output-sub.png" alt="IDAPython evaluated output of unnamed functions" style="width:500px">
 
 ### Find functions that call `__assert`
 
@@ -58,7 +58,7 @@ Next, use IDAPython's [`NextHead`](https://www.hex-rays.com/products/ida/support
 
 The output is a handful of functions that use `__assert`:
 
-![IDAPython evaluated output of functions with __assert references](/assets/images/idapro-assert-script/output-sub-assert.png)
+<img src="/assets/images/idapro-assert-script/output-sub-assert.png" alt="IDAPython evaluated output of functions with __assert references" style="width:500px">
 
 ### Find the `methodName` argument for `__assert`
 
@@ -74,7 +74,7 @@ In order to find what's in the `methodName` argument, the script needs to determ
 
 Running this script produces:
 
-![Final output of function names passed to __assert for each unnammed function](/assets/images/idapro-assert-script/output-names.png)
+<img src="/assets/images/idapro-assert-script/output-names.png" alt="Final output of function names passed to __assert for each unnammed function" style="width: 600px">
 
 Success!
 
