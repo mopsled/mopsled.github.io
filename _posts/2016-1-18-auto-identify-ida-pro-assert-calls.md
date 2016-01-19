@@ -78,10 +78,12 @@ Running this script produces:
 
 Success!
 
-### Bulk rewriting
+### Bulk renaming
 
 To have the script automatically rename each function, IDAPython's [`MakeName`](https://www.hex-rays.com/products/ida/support/idapython_docs/idc-module.html#MakeName) function can be used with arguments for the function's address and the new name. I haven't included it in the code above.
 
-    MakeName(function_address, function_new_name);
-    // e.g.
-    MakeName(0x4224D8, "httpReqLineParse");
+{% highlight python %}
+MakeName(function_address, function_new_name);
+// e.g.
+MakeName(0x4224D8, "httpReqLineParse");
+{% endhighlight %}
