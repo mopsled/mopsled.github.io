@@ -37,7 +37,7 @@ There are a few existing choices for WebSocket proxying and debugging:
 [Fiddler](http://www.telerik.com/fiddler) is a powerful web debugging proxy capable of displaying and making changes to WebSocket messages. [Fiddler added the ability to edit WebSocket messages](http://www.telerik.com/blogs/what-s-new-in-fiddler-2-4-4-5) in FiddlerScript using the `FiddlerApplication.OnWebSocketMessage` event. Fiddler is ideal for displaying and debugging WebSocket connections made locally on a Windows client.
 
 - Viewing WebSocket messages:
-![Fiddler WebSocket Screenshot](/assets/images/websocket-proxy/fiddler-websocket.PNG)
+![Fiddler WebSocket Screenshot](/assets/images/websocket-proxy/fiddler-websocket.png)
 
 - This is an example Fiddler script for changing WebSocket message payloads. This `CustomRules.cs` FiddlerScript file changes WebSocket messages from
 
@@ -75,19 +75,19 @@ to
       }
 
 Running this script in conjunction with [Kaazing's WebSocket echo test](kaazing.org/demos/echo/run):
-![Kaazing echo with forged message](/assets/images/websocket-proxy/fiddler-edit.PNG)
+![Kaazing echo with forged message](/assets/images/websocket-proxy/fiddler-edit.png)
 
 ### Charles
 
 The HTTP proxy [Charles](https://www.charlesproxy.com/) added the ability to [view WebSocket connections in 2015](https://www.charlesproxy.com/documentation/version-history/). Charles displays an iMessage-style view of a WebSocket conversation. At the time of writing, Charles does not provide any way to change or further debug WebSocket messages.
 
-![Charles WebSocket Screenshot](/assets/images/websocket-proxy/charles-websocket.PNG)
+![Charles WebSocket Screenshot](/assets/images/websocket-proxy/charles-websocket.png)
 
 ### Chrome
 
 WebSocket connections in Chrome can be viewed by clicking on a WebSocket connection in the Network Tab of Chrome's developer tools:
 
-![Chrome view of WebSockets](/assets/images/websocket-proxy/chrome-websocket.PNG)
+![Chrome view of WebSockets](/assets/images/websocket-proxy/chrome-websocket.png)
 
 Similar to Charles, Chrome can only view existing connections and doesn't have the ability to script or modify WebSocket connections.
 
@@ -120,7 +120,7 @@ This NodeJS package is a library for proxying and modifying HTTP requests. Howev
 
 Then, connect to `ws://localhost:10000`, which forwards the connection to `wss://echo.websocket.org`:
 
-![WebSocket to local proxy](/assets/images/websocket-proxy/nodejs-proxy-web.PNG)
+![WebSocket to local proxy](/assets/images/websocket-proxy/nodejs-proxy-web.png)
 
 Example output:
 
