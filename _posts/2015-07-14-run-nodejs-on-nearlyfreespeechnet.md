@@ -43,7 +43,7 @@ Next, use SSH to setup your node service on NFSN'S server. Your username, passwo
 mopsled_mycustomdomain@ssh.phx.nearlyfreespeech.net's password:
 [mycustomdomain /home/public]$</pre></li>
 
-<li>Go into the <code>/home/protected</code> folder to set up your node website. This will allow <code>node.js</code> to run as the `web` user.
+<li>Go into the <code>/home/protected</code> folder to set up your node website. This will allow <code>node.js</code> to run as the <code>web</code> user.
 
 <pre>[mycustomdomain /home/public]$ <strong>cd /home/protected</strong></pre></li>
 
@@ -64,23 +64,22 @@ In <code>run.sh</code>, type the command that starts your node.js process:
 
 <pre>npm run start</pre>
 
-<strong><code>&lt;CTRL&gt;+X</code></strong>, <strong><code>Y</code></strong>, <strong><code>&lt;Enter&gt;</code></strong> to save and exit from <code>nano</code>.<br><br>
+<strong><code>&lt;CTRL&gt;+X</code></strong>, <strong><code>Y</code></strong>, <strong><code>&lt;Enter&gt;</code></strong> to save and exit from <code>nano</code>.<br><br></li>
 
 <li>Test running your startup script:
 
-<pre>[mycustomdomain /home/protected/node-js-sample]$ <strong>chmod +x run.sh</strong>
+<pre><code>[mycustomdomain /home/protected/node-js-sample]$ <strong>chmod +x run.sh</strong>
 [mycustomdomain /home/protected/node-js-sample]$ <strong>./run.sh</strong>
 
 > node-js-sample@0.2.0 start /home/protected/node-js-sample
 > node index.js
 
-Node app is running at localhost:5000</pre></ol>
+Node app is running at localhost:5000</code></pre></li>
+</ol>
 
 Make sure your node.js service works from `run.sh` before continuing to the next step. Press `CTRL`+`X` to kill your service on SSH before the next section.
 
 Note: It's okay if your node app runs at a high-level port like `5000`, `8080`, or `10080`. NFSN doesn't give root permissions to allow for low-level port access, but instead uses *Proxies* to give your server access to low level ports. See [Configure Proxy](#configure-proxy) later in the guide.
-
----
 
 Configure NearlyFreeSpeech.net Daemon
 -------------------------------------

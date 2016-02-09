@@ -31,48 +31,49 @@ WebSocket Debugging Choices
 
 There are a few existing choices for WebSocket proxying and debugging:
 
-<div id="fiddler"></div>
-### Fiddler
+### Fiddler {#fiddler}
 
 [Fiddler](http://www.telerik.com/fiddler) is a powerful web debugging proxy capable of displaying and making changes to WebSocket messages. [Fiddler added the ability to edit WebSocket messages](http://www.telerik.com/blogs/what-s-new-in-fiddler-2-4-4-5) in FiddlerScript using the `FiddlerApplication.OnWebSocketMessage` event. Fiddler is ideal for displaying and debugging WebSocket connections made locally on a Windows client.
 
 - Viewing WebSocket messages:
 ![Fiddler WebSocket Screenshot](/assets/images/websocket-proxy/fiddler-websocket.png)
 
-- This is an example Fiddler script for changing WebSocket message payloads. This `CustomRules.cs` FiddlerScript file changes WebSocket messages from
+- Example Fiddler script for changing WebSocket message payloads:
 
-<pre><code>"Hello, &lt;something&gt;!"</pre></code>
+This `CustomRules.cs` FiddlerScript file changes WebSocket messages from
+
+<pre><code>"Hello, &lt;something&gt;!"</code></pre>
 
 to
 
-<pre><code>"Hello, FORGED-&lt;something&gt;!"</pre></code>
+<pre><code>"Hello, FORGED-&lt;something&gt;!"</code></pre>
 
 
-`CustomRules.cs`:
+`CustomRules.cs`
 
-      class Handlers
-      {
-          // ...
+    class Handlers
+    {
+        // ...
 
-          static function OnWebSocketMessage(oMsg: WebSocketMessage)
-          {
-              // Modify a message's content
-              var sPayload = oMsg.PayloadAsString();
-              var pattern = "Hello, \([a-zA-Z]+\)!";
-              var match = Regex.Match(sPayload, pattern);
+        static function OnWebSocketMessage(oMsg: WebSocketMessage)
+        {
+            // Modify a message's content
+            var sPayload = oMsg.PayloadAsString();
+            var pattern = "Hello, \([a-zA-Z]+\)!";
+            var match = Regex.Match(sPayload, pattern);
 
-              if (match.Success) {
-                  var pattern = "Hello, \([a-zA-Z]+\)!";
-                  var match = Regex.Match(sPayload, pattern);
-                  var who = match.Groups[1].ToString();
+            if (match.Success) {
+                var pattern = "Hello, \([a-zA-Z]+\)!";
+                var match = Regex.Match(sPayload, pattern);
+                var who = match.Groups[1].ToString();
 
-                  var forgedWho = String.Format("FORGED-{0}", who);
-                  var changedPayload = sPayload.Replace(who, forgedWho);
-                  FiddlerApplication.Log.LogString(String.Format("Changing {0} to {1}", who, forgedWho));
-                  oMsg.SetPayload(changedPayload);
-              }
-          }
-      }
+                var forgedWho = String.Format("FORGED-{0}", who);
+                var changedPayload = sPayload.Replace(who, forgedWho);
+                FiddlerApplication.Log.LogString(String.Format("Changing {0} to {1}", who, forgedWho));
+                oMsg.SetPayload(changedPayload);
+            }
+        }
+    }
 
 Running this script in conjunction with [Kaazing's WebSocket echo test](kaazing.org/demos/echo/run):
 ![Kaazing echo with forged message](/assets/images/websocket-proxy/fiddler-edit.png)

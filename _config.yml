@@ -4,8 +4,8 @@ meta_description:
 
 aboutPage: true
 
-markdown: rdiscount
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 
 gems: [jekyll-paginate]
 paginate: 20

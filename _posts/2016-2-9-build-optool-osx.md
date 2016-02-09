@@ -82,6 +82,6 @@ After the project builds, select the `optool` Product in the project organizer a
 
 Finder should open to the built copy of optool.
 
-![](/assets/images/optool-build/optool-finder.png)</li>
+![](/assets/images/optool-build/optool-finder.png)
 
 You're done!
